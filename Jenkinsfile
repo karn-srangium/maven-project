@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                env.PATH = "${tool 'localMarven'}/bin:${env.PATH}"
-            }
-            steps {
+                env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
                 sh 'mvn clean package'
             }
             post {
