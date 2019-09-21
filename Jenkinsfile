@@ -5,6 +5,7 @@ pipeline {
             /*env.PATH = '${tool 'localMaven'}/bin:${env.PATH}' */
             steps {
                 sh "echo ${tool 'localMaven'}"
+                env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
                 sh 'mvn clean package'
             }
             post {
