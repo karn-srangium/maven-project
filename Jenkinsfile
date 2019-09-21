@@ -1,5 +1,4 @@
 pipeline {
-    def env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
     agent any
     stages {
         stage('Build'){
