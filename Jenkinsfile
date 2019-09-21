@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
+                env.PATH = "${tool 'localMarven'}/bin:${env.PATH}"
                 sh 'mvn clean package'
             }
             post {
