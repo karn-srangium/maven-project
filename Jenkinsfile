@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
     stages {
+        env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
         stage('Build'){
             steps {
                 sh "echo ${tool 'localMaven'}"
