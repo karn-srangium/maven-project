@@ -1,1 +1,1 @@
-Hello, World!
+Hello, World from 'package1' build project!
