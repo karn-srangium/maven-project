@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Build'){
+            env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
             steps {
-                env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
                 sh 'mvn clean package'
             }
             post {
