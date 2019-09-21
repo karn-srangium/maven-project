@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                env.PATH = "${tool 'localMaven'}/bin:${env.PATH}"
+                /*env.PATH = "${tool 'localMaven'}/bin:${env.PATH}" */
                 sh "echo ${tool 'localMaven'}"
-                sh 'mvn clean package'
+                sh "${tool 'localMaven'}/bin/mvn clean package"
             }
             post {
                 success {
